@@ -12,11 +12,15 @@ public class Parole {
         //TODO
     }
 
-    public void addParola(String p) {
+    public boolean addParola(String p) {
         //TODO
-        elenco.add(p);
+        if (!elenco.contains(p))
+            return elenco.add(p);
+        return false;
     }
-
+    public boolean contieneParola(String p) {
+       return (elenco.contains(p));
+    }
     public List<String> getElenco() {
         //TODO
         Collections.sort(elenco);
